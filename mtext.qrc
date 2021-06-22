@@ -1,0 +1,42 @@
+<RCC>
+	<qresource prefix="/">
+		<file>bitmaps/printer.svg</file>
+		<file>bitmaps/aa.svg</file>
+		<file>bitmaps/ga.svg</file>
+		<file>bitmaps/rub.svg</file>
+		<file>bitmaps/euro.svg</file>
+		<file>bitmaps/leftkav.svg</file>
+		<file>bitmaps/rightkav.svg</file>
+		<file>bitmaps/num.svg</file>
+		<file>bitmaps/deg.svg</file>
+		<file>bitmaps/endash.svg</file>
+		<file>bitmaps/emdash.svg</file>
+		<file>bitmaps/lapki1.svg</file>
+		<file>bitmaps/lapki2.svg</file>
+		<file>bitmaps/tm.svg</file>
+		<file>bitmaps/report.svg</file>
+		<file>bitmaps/rupee.svg</file>
+		<file>bitmaps/lira.svg</file>
+		<file>bitmaps/textcenter.svg</file>
+		<file>bitmaps/textjustify.svg</file>
+		<file>bitmaps/textleft.svg</file>
+		<file>bitmaps/textright.svg</file>
+		<file>bitmaps/bold.svg</file>
+		<file>bitmaps/italic.svg</file>
+		<file>bitmaps/underline.svg</file>
+		<file>bitmaps/strike.svg</file>
+		<file>bitmaps/superscript.svg</file>
+		<file>bitmaps/subscript.svg</file>
+		<file>bitmaps/table.svg</file>
+		<file>bitmaps/one.svg</file>
+		<file>bitmaps/zoomin.svg</file>
+		<file>bitmaps/zoomout.svg</file>
+		<file>bitmaps/tool.svg</file>
+		<file>bitmaps/reload.svg</file>
+		<file>bitmaps/save2.svg</file>
+		<file>bitmaps/right0.svg</file>
+		<file>bitmaps/eye.svg</file>
+		<file>bitmaps/delete2.svg</file>
+	</qresource>
+</RCC>
+
