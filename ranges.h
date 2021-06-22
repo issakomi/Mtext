@@ -5,9 +5,9 @@
 
 typedef struct
 {
-	unsigned int from;
-	unsigned int to;
-	QString      name;
+	const unsigned int from;
+	const unsigned int to;
+	const QString      name;
 } UnicodeRange;
 
 const unsigned int ranges_size = 300;
