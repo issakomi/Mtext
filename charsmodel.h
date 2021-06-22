@@ -31,7 +31,7 @@ class CharsModel: public QAbstractTableModel
 
 public:
 	CharsModel();
-	~CharsModel();
+	virtual ~CharsModel() override;
 	void set_range(const unsigned int, const unsigned int, const bool);
 	void set_fg_color(const QColor);
 	void set_bg_color(const QColor);

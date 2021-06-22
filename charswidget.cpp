@@ -484,12 +484,19 @@ CharsWidget::CharsWidget(float si)
 
 CharsWidget::~CharsWidget()
 {
-	CharsModel * x = qobject_cast<CharsModel*>(tableView->model());
+}
+
+void CharsWidget::closeEvent(QCloseEvent * e)
+{
+#if 0
+	CharsModel * x = static_cast<CharsModel*>(tableView->model());
 	if (x)
 	{
 		delete x;
 		x = NULL;
 	}
+#endif
+	e->accept();
 }
 
 void CharsWidget::init_document()
@@ -611,8 +618,8 @@ void CharsWidget::set_range(int x)
 	const QVariant v = comboBox->itemData(x);
 	const QList<QVariant> l = v.toList();
 	if (l.size() != 2) return;
-	CharsModel * old = qobject_cast<CharsModel*>(tableView->model());
-	CharsModel * model = new CharsModel;
+	CharsModel * old = static_cast<CharsModel*>(tableView->model());
+	CharsModel * model = new CharsModel();
 	QFont font = QApplication::font();
 	font.setPointSizeF(font_size);
 	font.setFamily(font_family);

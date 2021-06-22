@@ -11,6 +11,7 @@
 #include <QTextListFormat>
 #include <QTextBlockFormat>
 #include <QSettings>
+#include <QCloseEvent>
 
 class TextEdit;
 class EditorGraphicsView;
@@ -109,6 +110,7 @@ private:
 	double view_scale;
 
 protected:
+	void closeEvent(QCloseEvent *);
 	void readSettings();
 };
 

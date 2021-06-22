@@ -17,7 +17,6 @@ void CharsModel::set_range(
 	const unsigned int to,
 	const bool symbola)
 {
-	model_data.clear();
 	rows_count = 0;
 	for (unsigned int x = from; x < to; x += 16)
 	{
