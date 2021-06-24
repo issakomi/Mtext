@@ -203,6 +203,8 @@ CharsWidget::CharsWidget(float si)
 		const int metrics = settings.value(QString("design_metrics"), 1).toInt();
 		settings.endGroup();
 		ff_lineEdit->setText(font_family);
+		const int idx2 = e_fontComboBox->findText(font_family);
+		e_fontComboBox->setCurrentIndex(idx2);
 		fs_doubleSpinBox->setValue(font_size);
 		const int idx0 = paper_comboBox->findText(ps);
 		paper_comboBox->setCurrentIndex(idx0);
@@ -488,6 +490,14 @@ CharsWidget::~CharsWidget()
 
 void CharsWidget::closeEvent(QCloseEvent * e)
 {
+	{
+		QSettings settings(
+			QSettings::IniFormat,
+			QSettings::UserScope,
+			QApplication::organizationName(),
+			QApplication::applicationName());
+		writeSettings(settings);
+    }
 #if 0
 	CharsModel * x = static_cast<CharsModel*>(tableView->model());
 	if (x)
@@ -598,7 +608,15 @@ void CharsWidget::readSettings()
 		}
 		else
 		{
+#ifdef __APPLE__
+			QFont font = QString("Arial Black");
+			if (!f.contains(QString("Arial Black")))
+			{
+				font = QApplication::font();
+			}
+#else
 			QFont font = QApplication::font();
+#endif
 			font_family = font.family();
 		}
 	}
