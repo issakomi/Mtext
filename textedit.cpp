@@ -62,6 +62,25 @@ TextEdit::TextEdit()
 	}
 #endif
 #endif
+	// initialize
+	m_paper_width_px = 0;
+	m_paper_height_px = 0;
+	m_page_width_px = 0;
+	m_page_height_px = 0;
+	m_page_x_px = 0;
+	m_page_y_px = 0;
+	m_page_r_px = 0;
+	m_page_b_px = 0;
+	m_margins_px_left = 0;
+	m_margins_px_top = 0;
+	m_margins_px_right = 0;
+	m_margins_px_bottom = 0;
+	m_margins_mm_left = 0;
+	m_margins_mm_top = 0;
+	m_margins_mm_right = 0;
+	m_margins_mm_bottom = 0;
+	m_font_size = 0;
+	m_design_metrics = false;
 }
 
 void TextEdit::new_document()

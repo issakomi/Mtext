@@ -498,14 +498,6 @@ void CharsWidget::closeEvent(QCloseEvent * e)
 			QApplication::applicationName());
 		writeSettings(settings);
     }
-#if 0
-	CharsModel * x = static_cast<CharsModel*>(tableView->model());
-	if (x)
-	{
-		delete x;
-		x = NULL;
-	}
-#endif
 	e->accept();
 }
 

@@ -14,6 +14,16 @@ public:
 	SymbolInfo(const QString & s, const QString & c) :
 		symbol(s),
 		code(c) {}
+	SymbolInfo(const SymbolInfo & o)
+	{
+		symbol = o.symbol;
+		code   = o.code;
+	}
+	SymbolInfo(SymbolInfo && o)
+	{
+		symbol = o.symbol;
+		code   = o.code;
+	}
 	~SymbolInfo() {}
 	QString symbol;
 	QString code;
@@ -21,6 +31,15 @@ public:
 	{
 		symbol = o.symbol;
 		code   = o.code;
+		return *this;
+	}
+	SymbolInfo& operator=(SymbolInfo && o)
+	{
+		if (this != &o)
+		{
+			symbol = o.symbol;
+			code   = o.code;
+		}
 		return *this;
 	}
 };
